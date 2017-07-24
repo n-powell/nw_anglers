@@ -10,14 +10,13 @@ end
 
 
 5.times do |index|
-  Post.create!(name: "Buzz Ramsey",
+  Post.create!(name: Faker::Name.name,
                         title: "Too much fish in clackamas",
-                        content: "I just cant stand all these fish here")
+                        content: Faker::MostInterestingManInTheWorld.quote)
 end
 
-
-10.times do |index|
-  Response.create!(name: "Owen",
-                        content: "No Kidding, Buzz",
+75.times do |index|
+  Response.create!(name: Faker::Name.name,
+                        content: Faker::MostInterestingManInTheWorld.quote,
                         post_id: rand(1..5) )
 end

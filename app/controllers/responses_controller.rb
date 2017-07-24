@@ -24,17 +24,9 @@ class ResponsesController < ApplicationController
   # POST /responses
   # POST /responses.json
   def create
+    @post = Post.find(params[:post_id])
     @response = Response.new(response_params)
-
-    respond_to do |format|
-      if @response.save
-        format.html { redirect_to @response, notice: 'Response was successfully created.' }
-        format.json { render :show, status: :created, location: @response }
-      else
-        format.html { render :new }
-        format.json { render json: @response.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to post_path(@post)
   end
 
   # PATCH/PUT /responses/1
@@ -55,8 +47,9 @@ class ResponsesController < ApplicationController
   # DELETE /responses/1.json
   def destroy
     @response.destroy
+    @post = Post.find(params[:post_id])
     respond_to do |format|
-      format.html { redirect_to responses_url, notice: 'Response was successfully destroyed.' }
+      format.html { redirect_to post_path(@post), notice: 'Response was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

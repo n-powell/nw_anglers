@@ -16,6 +16,21 @@
   </p>
   <hr>
 
+  <h2>Add a comment:</h2>
+  <%= form_for([@post, @post.responses.build]) do |f| %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.text_area :content %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
   <ul>
     <% @post.responses.each do |response|%>
     <% if response.id %>

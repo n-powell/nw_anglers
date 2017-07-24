@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :post_id %>
-    <%= f.number_field :post_id %>
+    <%= f.number_field :post_id, default: @post.id %>
   </div>
 
   <div class="actions">
