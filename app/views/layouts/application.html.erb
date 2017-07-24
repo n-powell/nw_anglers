@@ -9,6 +9,35 @@
   </head>
 
   <body>
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">NW Anglers</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/posts">Posts</a></li>
+      <% if current_user && current_user.admin == true %>
+        <h5>Currently logged in as admin</h5>
+      <% end %>
+    </ul>
+    <ul class="nav navbar-right row">
+      <% if current_user %>
+      <li>Signed in: <%= current_user.email %></li>
+      <li><%= link_to "Sign out", destroy_user_session_path, :method => "delete" %></li>
+     <% else %>
+       <li class="col-sm-6"><%= link_to "New Account", new_user_registration_path %></li>
+       <li class="col-sm-6"><%= link_to "Log In", user_session_path %></li>
+     <% end %>
+    </ul>
+  </div>
+</nav>
+
+<%= flash[:alert] %>
+<%= flash[:notice] %>
+
     <%= yield %>
+
   </body>
 </html>
