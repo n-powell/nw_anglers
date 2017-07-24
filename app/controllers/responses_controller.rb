@@ -25,7 +25,7 @@ class ResponsesController < ApplicationController
   # POST /responses.json
   def create
     @post = Post.find(params[:post_id])
-    @response = Response.new(response_params)
+    @response = @post.responses.create!(response_params)
     redirect_to post_path(@post)
   end
 
