@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :responses
   end
+  resources :responses
 
   devise_for :users
 
