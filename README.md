@@ -1,24 +1,13 @@
-# README
+# NW Anglers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project for anglers to document fish dates, tackle, share, and more.
 
 Things you may want to cover:
 
-* Ruby version
+* Users
 
-* System dependencies
+* Landing
 
-* Configuration
+* User view
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* layout
