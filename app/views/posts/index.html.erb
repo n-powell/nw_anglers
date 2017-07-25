@@ -7,8 +7,9 @@
     <tbody>
       <% @posts.each do |post| %>
       <tr>
-        <td><%= link_to post.name, post %></td>
+
         <td><%= link_to post.title, post %></td>
+        <td><%= link_to post.created_at.strftime("%d %b. %Y"), post %></td>
 
       </tr>
       <hr>
