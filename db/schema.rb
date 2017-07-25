@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170725231333) do
     t.string   "address"
     t.string   "description"
     t.date     "trip_date"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
