@@ -46,6 +46,8 @@ GEM
       json
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap-generators (3.3.4)
+      railties (>= 3.1.0)
     bootstrap-sass (3.3.4.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
@@ -85,6 +87,7 @@ GEM
     faker (1.8.4)
       i18n (~> 0.5)
     ffi (1.9.18)
+    geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
@@ -232,6 +235,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-generators
   bootstrap-sass
   byebug
   capybara
@@ -239,6 +243,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   faker
+  geocoder
   gmaps4rails
   jbuilder (~> 2.5)
   jquery-rails
