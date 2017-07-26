@@ -20,6 +20,7 @@ class TripsController < ApplicationController
 
   # GET /trips/1/edit
   def edit
+    @user = current_user
   end
 
   # POST /trips
