@@ -7,6 +7,15 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def landing
+    @trips = Trip.all
+    @hash = Gmaps4rails.build_markers(@trips) do |trip, marker|
+      marker.lat trip.latitude
+      marker.lng trip.longitude
+      marker.infowindow trip.address
+    end
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
