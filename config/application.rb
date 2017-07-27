@@ -17,7 +17,7 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 Dotenv::Railtie.load
 
-HOSTNAME = ENV['API_KEY']
+HOSTNAME = ENV['HOSTNAME']
 
 module NwAnglers
   class Application < Rails::Application

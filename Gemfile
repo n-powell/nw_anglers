@@ -29,11 +29,11 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'dotenv-rails'
 gem 'gmaps4rails'
 gem 'bootstrap-generators'
 gem 'geocoder'
 gem 'figaro'
-gem 'dotenv-rails', :groups => [:development, :test]
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
