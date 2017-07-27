@@ -33,7 +33,7 @@ gem 'gmaps4rails'
 gem 'bootstrap-generators'
 gem 'geocoder'
 gem 'figaro'
-
+gem 'dotenv-rails', :groups => [:development, :test]
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
