@@ -31,6 +31,7 @@
   color: white;
   width: 60%;
   margin-left: 20%;
+  border-radius: 8px;
 }
 
 body {
@@ -48,4 +49,12 @@ body {
 
 .map {
   align-items: right;
+}
+
+.post {
+  width: 90%;
+}
+
+.btn {
+  border-color: black;
 }

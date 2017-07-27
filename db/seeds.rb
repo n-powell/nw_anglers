@@ -19,15 +19,15 @@ end
 end
 
 
-5.times do |index|
+15.times do |index|
   Post.create!(name: Faker::Name.name,
-                        title: "Too much fish in clackamas",
-                        content: Faker::MostInterestingManInTheWorld.quote)
+                        title: Faker::Lorem.sentence(3, true, 4),
+                        content: Faker::Lorem.paragraph(2, false, 4))
 end
 
 75.times do |index|
   Response.create!(name: Faker::Name.name,
-                        content: Faker::MostInterestingManInTheWorld.quote,
+                        content: Faker::Lorem.paragraph(2, false, 4),
                         post_id: rand(1..5) )
 end
 

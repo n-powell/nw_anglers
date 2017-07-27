@@ -12,6 +12,8 @@
 
       <% @posts.each do |post| %>
       <table style="width:75%">
+        <col width="500">
+        <col width="300">
         <tr>
           <td><%= link_to post.title, post %></td>
           <td><%= link_to post.created_at.strftime("%b. %d  %Y"), post %></td>
