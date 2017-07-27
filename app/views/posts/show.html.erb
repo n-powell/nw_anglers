@@ -1,37 +1,44 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
 
-  <p>
+  <div class="container">
     <strong>Posted by:</strong>
-    <%= @post.name %>
-  </p>
+    <h3><%= @post.name %></h3>
+    <br>
+  </div>
 
-  <p>
-    <strong>Title:</strong>
-    <%= @post.title %>
-  </p>
 
-  <p>
-    <%= @post.content %>
-  </p>
+  <div class="title container">
+    Title:
+    <strong><%= @post.title %></strong>
+    <div class="container">
+      <p>
+        <%= @post.content %>
+      </p>
+    </div>
+  </div>
+
+
+
+
   <hr>
 
-<%= render 'response_form', post: @post %>
 
   <ul>
     <% @post.responses.each do |response|%>
-    <% if response.id %>
-    <li>
-      "<%= response.name%>" -
-      <%= response.content%>
-      <% if current_user && current_user.admin %>
-        <%= link_to "Delete response", post_response_path(@post, response), method: "delete" %>
-      <% end %>
-    </li>
-    <hr>
-    <% end%>
+      <% if response.id %>
+      <li>
+        "<%= response.name %>" -
+        <%= response.content %>
+        <% if current_user && current_user.admin %>
+          <%= link_to "Delete response", post_response_path(@post, response), method: "delete" %>
+        <% end %>
+      </li>
+      <hr>
+      <% end%>
     <% end %>
   </ul>
+  <%= render 'response_form', post: @post %>
 
   <% if current_user && current_user.admin %>
     <%= link_to 'Edit', edit_post_path(@post) %> |

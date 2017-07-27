@@ -15,3 +15,37 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+.title {
+  margin-top: 2em
+}
+
+.jumbotron {
+  font-family: 'Bungee Shade', cursive;
+
+  padding-top: 1em;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  height: 8em;
+  color: white;
+  width: 60%;
+  margin-left: 20%;
+}
+
+body {
+    background-image: url(salmon-river.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%, 100%, 100%;
+    background-attachment: fixed;
+
+}
+
+.container {
+  background-color: white;
+  margin-bottom: 2em;
+}
+
+.map {
+  align-items: right;
+}

@@ -2,22 +2,23 @@
   <p id="notice"><%= notice %></p>
 
   <h1>Forum</h1>
+  <% if current_user %>
+  <%= link_to 'New Post', new_post_path %>
+  <% end %>
+  <br>
   <hr>
 
-    <tbody>
+
+
       <% @posts.each do |post| %>
-      <tr>
-
-        <td><%= link_to post.title, post %></td>
-        <td><%= link_to post.created_at.strftime("%d %b. %Y"), post %></td>
-
-      </tr>
-      <hr>
+      <table style="width:75%">
+        <tr>
+          <td><%= link_to post.title, post %></td>
+          <td><%= link_to post.created_at.strftime("%b. %d  %Y"), post %></td>
+        </tr>
+      </table>
+      <br>
       <% end %>
 
-
   <br>
-  <% if current_user %>
-    <%= link_to 'New Post', new_post_path %>
-  <% end %>
 </div>
