@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-    <% @trips.each do |trip| %>
+    <% current_user.trips.each do |trip| %>
       <tr>
         <td><%= trip.latitude %></td>
         <td><%= trip.longitude %></td>

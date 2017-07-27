@@ -8,11 +8,13 @@ class PostsController < ApplicationController
   end
 
   def landing
-    @trips = Trip.all
-    @hash = Gmaps4rails.build_markers(@trips) do |trip, marker|
-      marker.lat trip.latitude
-      marker.lng trip.longitude
-      marker.infowindow trip.address
+    if current_user
+      @trips = current_user.trips
+      @hash = Gmaps4rails.build_markers(@trips) do |trip, marker|
+        marker.lat trip.latitude
+        marker.lng trip.longitude
+        marker.infowindow trip.address
+      end
     end
   end
 

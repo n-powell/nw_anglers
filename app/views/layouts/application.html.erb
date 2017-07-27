@@ -16,7 +16,7 @@
       <a class="navbar-brand" href="/">NW Anglers</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/">Home</a></li>
+      <li><%= link_to "Tackle Box", root_path, data: { turbolinks: false }  %></li>
       <li><a href="/posts">Forum</a></li>
       <% if current_user && current_user.admin == true %>
         <h5>Currently logged in as admin</h5>
