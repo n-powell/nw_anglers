@@ -11,20 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :latitude %>
-    <%= f.text_field :latitude %>
+  <div class="text">
+    <p>You can add a specific location here, if you know the coordinates.
+      <br>Otherwise, just add a general address or location name to the Location field. examples: Astoria Oregon or Columbia River</p>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :Location %>
+        <%= f.text_field :address %>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <p>or add specific coordinates</p>
+    </div>
+
+    <div class="col-md-3">
+      <div class="field">
+        <%= f.label :latitude %>
+        <%= f.text_field :latitude %>
+      </div>
+
+      <div class="field">
+        <%= f.label :longitude %>
+        <%= f.text_field :longitude %>
+      </div>
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= f.label :longitude %>
-    <%= f.text_field :longitude %>
-  </div>
-
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
+  <p>Add a description of the day, tackle, weather, etc.</p>
 
   <div class="field">
     <%= f.label :description %>
