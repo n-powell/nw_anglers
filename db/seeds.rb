@@ -4,18 +4,18 @@ Response.destroy_all
 
 1.times do |index|
   User.create!(email: "admin@gmail.com",
-                        password: "password",
+                        password: "1adminpass",
                         admin: true)
 end
 
 1.times do |index|
   User.create!(email: "user1@gmail.com",
-                        password: "password")
+                        password: "user1pass")
 end
 
 1.times do |index|
   User.create!(email: "user2@gmail.com",
-                        password: "password")
+                        password: "user2pass")
 end
 
 
