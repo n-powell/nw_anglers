@@ -9,8 +9,8 @@ Response.destroy_all
 end
 
 1.times do |index|
-  User.create!(email: "user1@gmail.com",
-                        password: "user1pass")
+  User.create!(email: "outdoorproject@gmail.com",
+                        password: "outdoorpassword")
 end
 
 1.times do |index|
