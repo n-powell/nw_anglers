@@ -4,12 +4,14 @@
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
 <% if current_user %>
-<h3><%= link_to "View all Fishing Trips", trips_path %></h3>
+<h3><ins><%= link_to "View all Fishing Trips", trips_path %></ins></h3>
 <p class="btn"><%= link_to "Add A Trip", new_trip_path %></p>
+<br>
 
   <div class="row">
       <div class="col-sm-2">
         <% if current_user.trips.any? %>
+        <h3>Trip Info</h3>
           <% current_user.trips.each do |trip| %>
             <li><%= link_to trip.address, trip %></li>
           <% end %>
