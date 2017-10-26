@@ -13,7 +13,7 @@ class PostsController < ApplicationController
       @hash = Gmaps4rails.build_markers(@trips) do |trip, marker|
         marker.lat trip.latitude
         marker.lng trip.longitude
-        marker.infowindow (trip.address + '<br>' + '<br>' + trip.description)
+        marker.infowindow (trip.address + '<br>' + trip.trip_date.to_s + '<br>' + trip.description)
       end
     end
   end
